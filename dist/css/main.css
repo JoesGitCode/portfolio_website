@@ -1,3 +1,32 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw; }
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out; }
+    .slider .slide .slide-content {
+      position: absolute;
+      bottom: 70px;
+      left: 0px;
+      width: 600px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 35px; }
+  .slider .current {
+    opacity: 1; }
+
+.slide:first-child {
+  background: url("..img/stock-tracker.png") no-repeat center top/cover; }
+
+.slide:nth-child(2) {
+  background: url("..img/pokemon-centre.png") no-repeat center center/cover; }
+
 * {
   margin: 0;
   padding: 0;
@@ -57,4 +86,4 @@ section {
     font-size: 0.8rem; }
 
 section#home {
-  background: url("../dist/img/desert.JPG") no-repeat center center/cover; }
+  background: url("../img/desert.JPG") no-repeat center center/cover; }

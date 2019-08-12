@@ -1,3 +1,5 @@
+@import "./slider";
+
 $primary-color: #333;
 $secondary-color: #f4f4f4;
 $tertiary-color: #f34151;
@@ -76,5 +78,5 @@ section {
 }
 
 section#home {
-  background: url("../dist/img/desert.JPG") no-repeat center center/cover;
+  background: url("../img/desert.JPG") no-repeat center center/cover;
 }
