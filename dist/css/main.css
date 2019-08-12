@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none; }
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  background: #333;
+  height: 100vh; }
+
+.site-container {
+  width: 100%;
+  height: 100%; }
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  z-index: 1;
+  display: flex;
+  background: rgba(0, 0, 0, 0.8); }
+  .navbar ul {
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    display: flex; }
+    .navbar ul li {
+      margin: 0 1rem;
+      padding: 1rem; }
+    .navbar ul a {
+      color: #f4f4f4;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .navbar ul a:hover {
+        color: #f34151; }

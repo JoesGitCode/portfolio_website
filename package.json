@@ -1,0 +1,22 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "Joseph Young Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoesGitCode/portfolio_website.git"
+  },
+  "author": "Joseph Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoesGitCode/portfolio_website/issues"
+  },
+  "homepage": "https://github.com/JoesGitCode/portfolio_website#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
