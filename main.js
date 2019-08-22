@@ -28,11 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => current.classList.remove("current"));
   };
 
-  next.addEventListener("click", () => {
+  next.addEventListener("click", event => {
     nextSlide();
+    if (auto) {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
   });
 
-  previous.addEventListener("click", e => {
+  previous.addEventListener("click", event => {
     previousSlide();
+    if (auto) {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
   });
 });

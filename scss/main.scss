@@ -16,8 +16,7 @@ $tertiary-color: #f34151;
 }
 
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   background: $primary-color;
   height: 100vh;
@@ -78,5 +77,27 @@ section {
 }
 
 section#home {
-  background: url("../img/desert.JPG") no-repeat center center/cover;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: background-animation 15s ease-in-out infinite;
+}
+
+section#about {
+  background: linear-gradient(black, black),
+    url("../img/desert.JPG") no-repeat center center/cover;
+  background-size: cover;
+  background-blend-mode: saturation;
+  color: red;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
