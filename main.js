@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
   const next = document.querySelector("#next");
   const previous = document.querySelector("#previous");
-  const auto = false;
+  const auto = true;
   const intervalTime = 5000;
   let slideInterval;
 
@@ -43,4 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slideInterval = setInterval(nextSlide, intervalTime);
     }
   });
+
+  if (auto) {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
 });

@@ -73,6 +73,7 @@ section {
   }
   p {
     font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -87,7 +88,7 @@ section#about {
     url("../img/desert.JPG") no-repeat center center/cover;
   background-size: cover;
   background-blend-mode: saturation;
-  color: red;
+  color: #fff;
 }
 
 @keyframes background-animation {
@@ -99,5 +100,15 @@ section#about {
   }
   100% {
     background-position: 0 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar ul li {
+    margin: 0 0.2rem;
+    padding: 0.8rem;
+    a {
+      font-size: 0.8rem;
+    }
   }
 }

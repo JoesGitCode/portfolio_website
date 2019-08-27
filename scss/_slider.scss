@@ -94,13 +94,13 @@ button {
   }
 }
 
-@media (max-width: 700px) {
-  .slide .slide-content {
-    bottom: -300px;
-    left: 0;
+@media screen and (max-width: 768px) {
+  .slider .slide .slide-content {
+    bottom: -350px;
+    left: 0px;
     width: 100%;
   }
-  .slide.current .slide-content {
+  .slider .slide.current .slide-content {
     transform: translateY(-300px);
   }
 }
