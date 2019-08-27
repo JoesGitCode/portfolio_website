@@ -51,6 +51,9 @@ body {
       color: $secondary-color;
       text-decoration: none;
       text-transform: uppercase;
+      .current {
+        border-bottom: $primary-color 2px solid;
+      }
       &:hover {
         color: $tertiary-color;
         @include easeOut();
