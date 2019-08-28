@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextSlide = () => {
     const current = document.querySelector(".current");
     current.classList.remove("current");
-    if (current.nextElementSibling) {
+    if (current.nextElementSibling.classList[0] == "slide") {
       current.nextElementSibling.classList.add("current");
     } else {
       slides[0].classList.add("current");
