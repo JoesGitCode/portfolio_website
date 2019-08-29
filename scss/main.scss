@@ -59,6 +59,10 @@ body {
   }
 }
 
+.typewriter > .type {
+  border-right: 0.1rem solid #fff;
+}
+
 section {
   display: flex;
   flex-direction: column;
