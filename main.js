@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // IMAGE SLIDER
+
   const slides = document.querySelectorAll(".slide");
   const next = document.querySelector("#next");
   const previous = document.querySelector("#previous");
@@ -47,4 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (auto) {
     slideInterval = setInterval(nextSlide, intervalTime);
   }
+
+  // TYPEWRITER
+
+  const TypeWriter = function(textElement, words, delayTime = 2000) {
+    this.textElement = textElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.delayTime = parseInt(delayTime, 10);
+    this.type();
+    this.isDeleting = false;
+  };
+
+  const textElement = document.querySelector(".typewriter ");
+  const words = JSON.parse(textElement.getAttribute("type-words"));
+  const delay = textElement.getAttribute("type-delay");
+  new TypeWriter(textElement, words, delay);
 });
