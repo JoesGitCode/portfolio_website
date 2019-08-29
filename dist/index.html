@@ -130,11 +130,47 @@
         </div>
       </section>
       <section id="contact">
-        <h1>Contact</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          eligendi soluta, quasi magni aut sit.
-        </p>
+        <h1>Contact Me</h1>
+        <p>If you have any questions, fire them at me using the form below</p>
+        <form method="POST" data-netlify="true">
+          <div class="fields">
+            <div class="field">
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="field">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="field">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                rows="7"
+              ></textarea>
+            </div>
+            <div class="field">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input type="submit" value="Send" class="submit-button" />
+              </li>
+            </ul>
+          </div>
+        </form>
       </section>
     </div>
   </body>
