@@ -71,8 +71,9 @@ button {
     top: 50%;
     left: 15px; }
   button:hover {
-    background-color: #333;
+    background-color: #f34151;
     color: #fff;
+    border: #f34151 1px solid;
     transition: ease-in-out; }
 
 @media screen and (max-width: 768px) {
@@ -149,24 +150,40 @@ section {
     padding: 0.5rem 1rem; }
 
 section#home {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #f34151, #23a6d5, #41f3d2);
   background-size: 400% 400%;
   animation: background-animation 15s ease-in-out infinite; }
+  section#home p {
+    margin-top: 10%; }
 
 section#about {
-  background: linear-gradient(black, black), url("../img/desert.JPG") no-repeat center center/cover;
-  background-size: cover;
-  background-blend-mode: saturation;
-  color: #fff; }
+  background: #f34151;
+  display: flex;
+  flex-direction: row; }
+  section#about .about-content {
+    margin-top: 10%;
+    height: 100vh;
+    width: 50vw;
+    background: #f34151; }
+  section#about .about-picture {
+    height: 100vh;
+    width: 50vw;
+    background: linear-gradient(black, black), url("../img/desert.JPG") no-repeat center center/cover;
+    background-size: cover;
+    background-blend-mode: saturation; }
+
+section#contact {
+  background: #f34151; }
 
 form .fields {
   max-width: 40vw;
   width: 40vw;
   height: 50vh;
+  margin-bottom: 10%;
   display: grid;
-  grid-template-areas: "name subject" "email email" "message message" "recaptcha recaptcha" "button button";
+  grid-template-areas: "name subject" "email email" "message message" "button button";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
   grid-gap: 5px; }
   form .fields .field {
     width: 100%;
@@ -177,23 +194,24 @@ form .fields {
       width: 100%;
       height: 100%;
       margin: 2px;
-      color: #f4f4f4;
+      color: #252627;
       padding: 15px;
       border: none;
-      background-color: #37393b; }
+      background-color: #fff; }
       form .fields .field input:focus,
       form .fields .field textarea:focus {
-        border-bottom: #f34151 2px solid;
+        border-bottom: #41f3d2 2px solid;
         outline: none; }
   form .fields ul li input {
     margin-top: 10px;
-    background-color: #252627;
+    background-color: #fff;
     color: #f34151;
     border: #f34151 1px solid;
+    width: 50%;
     padding: 5px;
     border-radius: 3px; }
     form .fields ul li input:hover {
-      background-color: #f34151;
+      background-color: #41f3d2;
       color: #252627; }
   form .fields .name {
     grid-area: name;
@@ -215,6 +233,8 @@ form .fields {
     grid-area: recaptcha;
     width: 100%;
     height: 100%; }
+    form .fields .recaptcha div {
+      max-width: 100%; }
 
 @keyframes background-animation {
   0% {

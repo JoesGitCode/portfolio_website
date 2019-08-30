@@ -89,8 +89,9 @@ button {
   }
 
   &:hover {
-    background-color: #333;
+    background-color: #f34151;
     color: #fff;
+    border: #f34151 1px solid;
     transition: ease-in-out;
   }
 }

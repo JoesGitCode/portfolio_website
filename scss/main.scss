@@ -3,6 +3,7 @@
 $primary-color: #252627;
 $secondary-color: #f4f4f4;
 $tertiary-color: #f34151;
+$complementary-color: #41f3d2;
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
@@ -86,34 +87,60 @@ section {
 }
 
 section#home {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(
+    -45deg,
+    #ee7752,
+    $tertiary-color,
+    #23a6d5,
+    #41f3d2
+  );
   background-size: 400% 400%;
   animation: background-animation 15s ease-in-out infinite;
+  p {
+    margin-top: 10%;
+  }
 }
 
 section#about {
-  background: linear-gradient(black, black),
-    url("../img/desert.JPG") no-repeat center center/cover;
-  background-size: cover;
-  background-blend-mode: saturation;
-  color: #fff;
+  background: $tertiary-color;
+  display: flex;
+  flex-direction: row;
+  .about-content {
+    margin-top: 10%;
+    height: 100vh;
+    width: 50vw;
+    background: $tertiary-color;
+  }
+  .about-picture {
+    height: 100vh;
+    width: 50vw;
+    background: linear-gradient(black, black),
+      url("../img/desert.JPG") no-repeat center center/cover;
+    background-size: cover;
+    background-blend-mode: saturation;
+  }
 }
 
 // Form
+
+section#contact {
+  background: $tertiary-color;
+}
 
 form .fields {
   max-width: 40vw;
   width: 40vw;
   height: 50vh;
+  margin-bottom: 10%;
   display: grid;
   grid-template-areas:
     "name subject"
     "email email"
     "message message"
-    "recaptcha recaptcha"
+    // "recaptcha recaptcha"
     "button button";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
   grid-gap: 5px;
 
   .field {
@@ -125,27 +152,30 @@ form .fields {
       width: 100%;
       height: 100%;
       margin: 2px;
-      color: #f4f4f4;
+      color: $primary-color;
       padding: 15px;
       border: none;
-      background-color: #37393b;
+      background-color: #fff;
 
       &:focus {
-        border-bottom: $tertiary-color 2px solid;
+        border-bottom: $complementary-color 2px solid;
         outline: none;
       }
     }
   }
-  ul li input {
-    margin-top: 10px;
-    background-color: $primary-color;
-    color: $tertiary-color;
-    border: $tertiary-color 1px solid;
-    padding: 5px;
-    border-radius: 3px;
-    &:hover {
-      background-color: $tertiary-color;
-      color: $primary-color;
+  ul li {
+    input {
+      margin-top: 10px;
+      background-color: #fff;
+      color: $tertiary-color;
+      border: $tertiary-color 1px solid;
+      width: 50%;
+      padding: 5px;
+      border-radius: 3px;
+      &:hover {
+        background-color: $complementary-color;
+        color: $primary-color;
+      }
     }
   }
   .name {
@@ -176,6 +206,9 @@ form .fields {
     grid-area: recaptcha;
     width: 100%;
     height: 100%;
+    div {
+      max-width: 100%;
+    }
   }
 }
 
