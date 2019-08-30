@@ -25,12 +25,12 @@
         </ul>
       </nav>
       <section id="home">
-        <h1>Joseph Young:</h1>
+        <h1>Joseph Young</h1>
         <h2>
           <span
             class="typewriter"
             type-delay="2000"
-            type-words='["Software Developer", "Creator", "Problem Solver"]'
+            type-words='["Software Developer", "Full-stack Applications", "Web Developer", "Agile Methodologies", "Test Driven Development"]'
           ></span>
         </h2>
         <p>
@@ -59,7 +59,9 @@
                   target="_blank"
                   >Site</a
                 >
-                <a href="https://github.com/JoesGitCode/stock_tracker_app"
+                <a
+                  href="https://github.com/JoesGitCode/stock_tracker_app"
+                  target="_blank"
                   >Github</a
                 >
               </div>
@@ -76,7 +78,9 @@
                 <a href="https://pokemon-centre.herokuapp.com" target="_blank"
                   >Site</a
                 >
-                <a href="https://github.com/JoesGitCode/pokemon_centre"
+                <a
+                  href="https://github.com/JoesGitCode/pokemon_centre"
+                  target="_blank"
                   >Github</a
                 >
               </div>
@@ -96,7 +100,9 @@
                   target="_blank"
                   >Github (Front-end)</a
                 >
-                <a href="https://github.com/JoesGitCode/DropTable---Spring"
+                <a
+                  href="https://github.com/JoesGitCode/DropTable---Spring"
+                  target="_blank"
                   >Github (Back-end)</a
                 >
               </div>
@@ -118,6 +124,7 @@
                 >
                 <a
                   href="https://github.com/JoesGitCode/Harry_Kanes_Block_Breaker"
+                  target="_blank"
                   >Github</a
                 >
               </div>
@@ -134,10 +141,16 @@
         <p>If you have any questions, fire them at me using the form below</p>
         <form method="POST" data-netlify="true">
           <div class="fields">
-            <div class="field">
-              <input type="text" name="name" id="name" placeholder="Name" />
+            <div class="field name">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
             </div>
-            <div class="field">
+            <div class="field subject">
               <input
                 type="text"
                 name="subject"
@@ -145,7 +158,8 @@
                 placeholder="Subject"
               />
             </div>
-            <div class="field">
+
+            <div class="field email">
               <input
                 type="email"
                 name="email"
@@ -153,7 +167,7 @@
                 placeholder="E-mail"
               />
             </div>
-            <div class="field">
+            <div class="field message">
               <textarea
                 name="message"
                 id="message"
@@ -161,16 +175,19 @@
                 rows="7"
               ></textarea>
             </div>
-            <div class="field">
+            <div class="field recaptcha">
               <div data-netlify-recaptcha="true"></div>
             </div>
-            <ul class="actions">
+            <ul class="actions button">
               <li>
                 <input type="submit" value="Send" class="submit-button" />
               </li>
             </ul>
           </div>
         </form>
+        <div class="footer">
+          <p>&copy; 2019 Joseph Young. All rights reserved</p>
+        </div>
       </section>
     </div>
   </body>

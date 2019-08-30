@@ -93,7 +93,7 @@ button {
 body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  background: #333;
+  background: #252627;
   height: 100vh; }
 
 .site-container {
@@ -127,6 +127,9 @@ body {
         color: #f34151;
         transition: all 0.5s ease-out; }
 
+.footer {
+  bottom: 0px; }
+
 .typewriter > .type {
   border-right: 0.1rem solid #fff; }
 
@@ -155,6 +158,60 @@ section#about {
   background-size: cover;
   background-blend-mode: saturation;
   color: #fff; }
+
+form .fields {
+  width: 40vw;
+  height: 50vh;
+  display: grid;
+  grid-template-areas: "name subject" "email email" "message message" "recaptcha button";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-gap: 5px; }
+  form .fields .field {
+    width: 100%;
+    height: 100%;
+    border: none; }
+    form .fields .field input,
+    form .fields .field textarea {
+      width: 100%;
+      height: 100%;
+      margin: 2px;
+      color: #f4f4f4;
+      padding: 15px;
+      border: none;
+      background-color: #37393b; }
+      form .fields .field input:focus,
+      form .fields .field textarea:focus {
+        border-bottom: #f34151 2px solid;
+        outline: none; }
+  form .fields ul li input {
+    margin-top: 10px;
+    background-color: #252627;
+    color: #f34151;
+    border: #f34151 1px solid;
+    padding: 5px;
+    border-radius: 3px; }
+    form .fields ul li input:hover {
+      background-color: #f34151;
+      color: #252627; }
+  form .fields .name {
+    grid-area: name;
+    height: 100%;
+    width: 100%; }
+  form .fields .subject {
+    grid-area: subject;
+    width: 100%;
+    height: 100%; }
+  form .fields .email {
+    grid-area: email;
+    width: 100%;
+    height: 100%; }
+  form .fields .message {
+    grid-area: message;
+    width: 100%;
+    height: 100%; }
+  form .fields .recaptcha {
+    grid-area: recaptcha; }
 
 @keyframes background-animation {
   0% {

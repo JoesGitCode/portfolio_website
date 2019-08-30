@@ -1,6 +1,6 @@
 @import "./slider";
 
-$primary-color: #333;
+$primary-color: #252627;
 $secondary-color: #f4f4f4;
 $tertiary-color: #f34151;
 @mixin easeOut {
@@ -59,6 +59,10 @@ body {
   }
 }
 
+.footer {
+  bottom: 0px;
+}
+
 .typewriter > .type {
   border-right: 0.1rem solid #fff;
 }
@@ -93,6 +97,82 @@ section#about {
   background-size: cover;
   background-blend-mode: saturation;
   color: #fff;
+}
+
+// Form
+
+form .fields {
+  width: 40vw;
+  height: 50vh;
+  display: grid;
+  grid-template-areas:
+    "name subject"
+    "email email"
+    "message message"
+    "recaptcha button";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-gap: 5px;
+
+  .field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    input,
+    textarea {
+      width: 100%;
+      height: 100%;
+      margin: 2px;
+      color: #f4f4f4;
+      padding: 15px;
+      border: none;
+      background-color: #37393b;
+
+      &:focus {
+        border-bottom: $tertiary-color 2px solid;
+        outline: none;
+      }
+    }
+  }
+  ul li input {
+    margin-top: 10px;
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border: $tertiary-color 1px solid;
+    padding: 5px;
+    border-radius: 3px;
+    &:hover {
+      background-color: $tertiary-color;
+      color: $primary-color;
+    }
+  }
+  .name {
+    grid-area: name;
+    height: 100%;
+    width: 100%;
+  }
+
+  .subject {
+    grid-area: subject;
+    width: 100%;
+    height: 100%;
+  }
+
+  .email {
+    grid-area: email;
+    width: 100%;
+    height: 100%;
+  }
+
+  .message {
+    grid-area: message;
+    width: 100%;
+    height: 100%;
+  }
+
+  .recaptcha {
+    grid-area: recaptcha;
+  }
 }
 
 @keyframes background-animation {
