@@ -164,9 +164,9 @@ form .fields {
   width: 40vw;
   height: 50vh;
   display: grid;
-  grid-template-areas: "name subject" "email email" "message message" "recaptcha button";
+  grid-template-areas: "name subject" "email email" "message message" "recaptcha recaptcha" "button button";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
   grid-gap: 5px; }
   form .fields .field {
     width: 100%;
