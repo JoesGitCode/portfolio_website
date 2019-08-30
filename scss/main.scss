@@ -106,10 +106,11 @@ section#about {
   display: flex;
   flex-direction: row;
   .about-content {
-    margin-top: 10%;
+    margin-top: 30%;
     height: 100vh;
     width: 50vw;
     background: $tertiary-color;
+    margin-bottom: 10%;
   }
   .about-picture {
     height: 100vh;
@@ -118,6 +119,15 @@ section#about {
       url("../img/desert.JPG") no-repeat center center/cover;
     background-size: cover;
     background-blend-mode: saturation;
+    h1 {
+      margin-top: 10%;
+      color: $tertiary-color;
+    }
+  }
+  ul li {
+    font-size: 1.2rem;
+    margin: 5%;
+    margin-bottom: 10%;
   }
 }
 
@@ -127,7 +137,14 @@ section#contact {
   background: $tertiary-color;
 }
 
+form {
+  // min-width: 300px;
+  // align-content: center;
+}
+
 form .fields {
+  min-width: 300px;
+
   max-width: 40vw;
   width: 40vw;
   height: 50vh;
@@ -163,8 +180,9 @@ form .fields {
       }
     }
   }
-  ul li {
-    input {
+  ul {
+    left: 0;
+    li input {
       margin-top: 10px;
       background-color: #fff;
       color: $tertiary-color;
