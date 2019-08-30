@@ -160,6 +160,7 @@ section#about {
   color: #fff; }
 
 form .fields {
+  max-width: 40vw;
   width: 40vw;
   height: 50vh;
   display: grid;
@@ -211,7 +212,9 @@ form .fields {
     width: 100%;
     height: 100%; }
   form .fields .recaptcha {
-    grid-area: recaptcha; }
+    grid-area: recaptcha;
+    width: 100%;
+    height: 100%; }
 
 @keyframes background-animation {
   0% {
