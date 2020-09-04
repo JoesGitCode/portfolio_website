@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/JoesGitCode/portfolio_website#readme",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   }
 }
